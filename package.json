@@ -1,0 +1,31 @@
+{
+  "name": "plurimath",
+  "version": "0.1.0",
+  "description": "Convert mathematical formulas between formats (MathML, OMMX, LatexMath, AsciiMath).",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plurimath-js/plurimath-js.git"
+  },
+  "keywords": [
+    "ommx",
+    "mathml",
+    "latexmath",
+    "asciimath",
+    "asciidoc",
+    "plurimath",
+    "opal"
+  ],
+  "author": "Ribose Inc.",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/plurimath-js/plurimath-js/issues"
+  },
+  "homepage": "https://github.com/plurimath-js/plurimath-js#readme",
+  "dependencies": {
+    "terser": "^5.18.2"
+  }
+}

@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+gem 'parslet', path: 'vendor/parslet'
+gem 'oga', path: 'vendor/oga'
+gem 'opal', path: 'vendor/opal'
+gem 'equivalent-xml', path: 'vendor/equivalent-xml'
+gem 'ruby-ll', path: 'vendor/ruby-ll'
+gem 'htmlentities', path: 'vendor/htmlentities'
+
+gem 'nokogiri'
+gem 'rake'
+gem 'opal-rspec'
+gem 'opal-sprockets'
+gem 'rspec'
+gem 'ae'

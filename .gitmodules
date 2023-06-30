@@ -1,0 +1,24 @@
+[submodule "vendor/equivalent-xml"]
+	path = vendor/equivalent-xml
+	url = https://github.com/plurimath-js/equivalent-xml
+[submodule "vendor/flexmock"]
+	path = vendor/flexmock
+	url = https://github.com/plurimath-js/flexmock
+[submodule "vendor/htmlentities"]
+	path = vendor/htmlentities
+	url = https://github.com/plurimath-js/htmlentities
+[submodule "vendor/oga"]
+	path = vendor/oga
+	url = https://github.com/plurimath-js/oga
+[submodule "vendor/opal"]
+	path = vendor/opal
+	url = https://github.com/plurimath-js/opal
+[submodule "vendor/parslet"]
+	path = vendor/parslet
+	url = https://github.com/plurimath-js/parslet
+[submodule "vendor/plurimath"]
+	path = vendor/plurimath
+	url = https://github.com/plurimath-js/plurimath
+[submodule "vendor/ruby-ll"]
+	path = vendor/ruby-ll
+	url = https://github.com/plurimath-js/ruby-ll
