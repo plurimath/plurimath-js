@@ -18,3 +18,6 @@ Inside Podman shell:
 # ./build.sh
 ```
 
+## Demo
+
+Demo is available [here](https://plurimath-js.github.io/plurimath-js/demo.html)
