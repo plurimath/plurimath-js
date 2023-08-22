@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plurimath demo</title>
+
+    <style>
+      form>* { width: 45%; float: left; }
+      textarea { height: 90vh; }
+      button { width: 90%; }
+    </style>
+  </head>
+  <body>
+    <form>
+      <textarea id="from"></textarea>
+      <textarea id="to"></textarea>
+      <select id="fromfmt">
+        <option>asciimath</option>
+        <option>omml</option>
+        <option>html</option>
+        <option>mathml</option>
+        <option>latex</option>
+      </select>
+      <select id="tofmt">
+        <option>Asciimath</option>
+        <option>Omml</option>
+        <option>Html</option>
+        <option>Mathml</option>
+        <option>Latex</option>
+      </select>
+
+      <button>Convert</button>
+    </form>
+
+    <script type="module">
+      import Plurimath from "./index.mjs";
+
+      document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        var from = document.getElementById("from").value;
+        var fromfmt = document.getElementById("fromfmt").value;
+        var tofmt = document.getElementById("tofmt").value;
+
+        var to = document.getElementById("to");
+
+        var pm = new Plurimath(from, fromfmt);
+        to.value = pm["to"+tofmt]();
+      });
+    </script>
+  </body>
+</html>
