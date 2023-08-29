@@ -4,7 +4,8 @@
   "description": "Convert mathematical formulas between formats (MathML, OMMX, LatexMath, AsciiMath).",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run test:rb",
+    "test:rb": "npm run podman:bundle && podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c cd /srv && /bin/bash dev/spec_plurimath.sh",
     "podman:build": "podman build -t plurimath-js .",
     "podman:shell": "podman run --rm -it -v.:/srv:z plurimath-js",
     "podman:bundle": "podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c cd /srv && bundle install && ./setup.sh && ./build.sh",
