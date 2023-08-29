@@ -7,6 +7,8 @@ bundle exec opal --esm \
                  -ghtmlentities \
                  -goga \
                  -gparslet \
+                 -Ivendor/oga/xml/ \
+                 -Ivendor/oga/xpath/ \
                  -Ivendor/oga/ext/pureruby/ \
                  -Ivendor/ruby-ll/ext/pureruby/ \
                  -Ivendor/plurimath/lib \
