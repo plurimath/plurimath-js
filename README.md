@@ -18,6 +18,14 @@ Inside Podman shell:
 # ./build.sh
 ```
 
+## Testing
+
+The individual submodules can be tested using scripts in `env` directory.
+Those scripts ensure that all the dependencies are satisfied using the
+individual submodules and not the released versions. By default, if you
+don't provide parameters denoting the command line utility you want to run,
+they will issue `opal-rspec`.
+
 ## Demo
 
 Demo is available [here](https://plurimath-js.github.io/plurimath-js/demo.html)

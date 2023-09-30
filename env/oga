@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+Dir.chdir "vendor/oga" do
+  exit system *(ARGV.empty? ? %w[rake test-opal] : ARGV)
+end

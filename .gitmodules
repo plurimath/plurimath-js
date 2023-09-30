@@ -10,9 +10,6 @@
 [submodule "vendor/oga"]
 	path = vendor/oga
 	url = https://github.com/plurimath-js/oga
-[submodule "vendor/opal"]
-	path = vendor/opal
-	url = https://github.com/plurimath-js/opal
 [submodule "vendor/parslet"]
 	path = vendor/parslet
 	url = https://github.com/plurimath-js/parslet

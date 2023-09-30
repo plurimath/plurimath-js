@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+Dir.chdir "vendor/parslet" do
+  exit system *(ARGV.empty? ? %w[rake spec:opal] : ARGV)
+end
