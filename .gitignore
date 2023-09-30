@@ -1,5 +1,6 @@
 _*
 /plurimath-opal*
+/dist
 /package-lock.json
 /Gemfile.lock
 /node_modules

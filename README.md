@@ -4,6 +4,12 @@ A JavaScript converter of mathematical formulas
 
 ## Building
 
+### The easy method
+
+Please make sure you have podman installed and do `npm run submodule:init` and then `npm run build`.
+
+### The developer method
+
 It is recommended to use Docker/Podman to get a compatible environment.
 As of now, it is needed to use Ragel 6 to build necessary parsers.
 
@@ -13,7 +19,6 @@ $ podman run --rm -it -v.:/srv:z plurimath-js
 
 Inside Podman shell:
 
-# cd /srv
 # ./setup.sh
 # ./build.sh
 ```
