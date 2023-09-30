@@ -1,5 +1,8 @@
 name: Build and Deploy GH Pages
-on: [push]
+on:
+  push:
+    branches:
+      - master
 jobs:
   pages:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
@@ -7,10 +10,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
-      - name: Build Podman container
-        run: podman build -t plurimath-builder .
       - name: Run Podman container to build demo
-        run: podman run --rm -it -v.:/srv:z plurimath-builder bash -c 'cd /srv; ./setup.sh; ./build.sh; mkdir gh-pages; cd gh-pages; cp ../demo.html ../index.mjs ../plurimath-opal.mjs ../plurimath-opal.min.mjs .'
+        run: npm run build; mkdir gh-pages; cd gh-pages; cp -a ../demo.html ../dist/ .
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:

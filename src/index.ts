@@ -1,8 +1,8 @@
-require("./plurimath-opal.js");
+import "./plurimath-opal.js";
 
 Opal.require("plurimath");
 
-export default class PlurimathJS {
+export default class Plurimath {
   data: Opal.Plurimath.Math.ParserResult
 
   constructor(data: string, format: Opal.Plurimath.Math.Format) {

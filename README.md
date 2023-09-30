@@ -19,7 +19,6 @@ $ podman run --rm -it -v.:/srv:z plurimath-js
 
 Inside Podman shell:
 
-# cd /srv
 # ./setup.sh
 # ./build.sh
 ```
