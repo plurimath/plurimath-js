@@ -15,3 +15,7 @@ bundle exec opal --esm -sjruby \
                  -c -e'#' > dist/plurimath-opal.js
 
 npx terser -c -m --module < dist/plurimath-opal.js > dist/plurimath-opal.min.js
+
+cp src/* dist
+
+npx babel dist/index.ts > dist/index.js
