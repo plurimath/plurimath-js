@@ -2,14 +2,19 @@ source 'https://rubygems.org'
 
 gem 'parslet', path: 'vendor/parslet'
 gem 'oga', path: 'vendor/oga'
-gem 'opal', path: 'vendor/opal'
 gem 'equivalent-xml', path: 'vendor/equivalent-xml'
 gem 'ruby-ll', path: 'vendor/ruby-ll'
 gem 'htmlentities', path: 'vendor/htmlentities'
 
+gem 'opal', git: "https://github.com/opal/opal.git"
+gem 'opal-rspec', git: "https://github.com/opal/opal-rspec.git"
+
 gem 'nokogiri'
 gem 'rake'
-gem 'opal-rspec'
-gem 'opal-sprockets'
 gem 'rspec'
 gem 'ae'
+gem 'flexmock'
+
+gem 'rake-compiler'
+gem 'rdoc'
+gem 'sdoc'
