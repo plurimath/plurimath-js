@@ -10,7 +10,7 @@
     "test:rb": "npm run podman:bundle && podman run --rm -it -v.:/srv:z plurimath-js env/plurimath",
     "podman:build": "podman build -t plurimath-js .",
     "podman:shell": "podman run --rm -it -v.:/srv:z plurimath-js",
-    "podman:bundle": "podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh && cp src/* dist'",
+    "podman:bundle": "podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh && cp src/* dist && npx babel dist/index.ts > dist/index.js'",
     "build": "npm run podman:build && npm run podman:bundle",
     "submodule:init": "git submodule init && npm run submodule:update",
     "submodule:update": "git submodule update"
@@ -35,9 +35,10 @@
   },
   "homepage": "https://github.com/plurimath-js/plurimath-js#readme",
   "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
     "@babel/plugin-transform-modules-commonjs": "^7.23.0",
     "@babel/preset-typescript": "^7.23.0",
-    "babel-cli": "^6.26.0",
     "jest": "^29.7.0",
     "terser": "^5.20.0",
     "typescript": "^5.2.2"
