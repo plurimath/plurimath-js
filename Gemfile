@@ -7,7 +7,7 @@ gem 'ruby-ll', path: 'vendor/ruby-ll'
 gem 'htmlentities', path: 'vendor/htmlentities'
 
 gem 'opal', git: "https://github.com/opal/opal.git"
-gem 'opal-rspec', git: "https://github.com/opal/opal-rspec.git"
+gem 'opal-rspec', git: "https://github.com/opal/opal-rspec.git", submodules: true
 
 gem 'nokogiri'
 gem 'rake'
