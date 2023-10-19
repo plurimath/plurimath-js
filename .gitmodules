@@ -1,9 +1,6 @@
 [submodule "vendor/equivalent-xml"]
 	path = vendor/equivalent-xml
 	url = https://github.com/plurimath-js/equivalent-xml
-[submodule "vendor/flexmock"]
-	path = vendor/flexmock
-	url = https://github.com/plurimath-js/flexmock
 [submodule "vendor/htmlentities"]
 	path = vendor/htmlentities
 	url = https://github.com/plurimath-js/htmlentities
