@@ -19,3 +19,6 @@
 [submodule "vendor/ruby-ll"]
 	path = vendor/ruby-ll
 	url = https://github.com/plurimath-js/ruby-ll
+[submodule "vendor/opal"]
+	path = vendor/opal
+	url = https://github.com/plurimath-js/opal
