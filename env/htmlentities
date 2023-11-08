@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require 'bundler/setup'
+Dir.chdir "vendor/htmlentities" do
+  exit system *(ARGV.empty? ? %w[opal-rspec] : ARGV)
+end
