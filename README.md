@@ -33,4 +33,4 @@ they will issue `opal-rspec`.
 
 ## Demo
 
-Demo is available [here](https://plurimath-js.github.io/plurimath-js/demo.html)
+Demo is available [here](https://www.plurimath.org/plurimath-js/demo.html)
