@@ -13,7 +13,7 @@ gem 'nokogiri'
 gem 'rake'
 gem 'rspec'
 gem 'ae'
-gem 'flexmock'
+gem 'flexmock', git: "https://github.com/doudou/flexmock.git"
 
 gem 'rake-compiler'
 gem 'rdoc'
