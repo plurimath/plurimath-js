@@ -4,3 +4,4 @@ _*
 /package-lock.json
 /Gemfile.lock
 /node_modules
+/tmp
