@@ -1,4 +1,4 @@
-import "./plurimath-opal.min.js";
+import "./plurimath-opal.js";
 
 Opal.require("plurimath");
 
