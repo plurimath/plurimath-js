@@ -28,4 +28,8 @@ export default class Plurimath {
   toOmml() {
     return this.data.$to_omml();
   }
+
+  toDisplay(lang: string) {
+    return this.data.$to_display(lang);
+  }
 }

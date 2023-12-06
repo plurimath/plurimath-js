@@ -16,6 +16,7 @@ declare namespace Opal {
         $to_mathml: TransmuterFunction
         $to_html: TransmuterFunction
         $to_omml: TransmuterFunction
+        $to_display: (string) => string
       }
     }
   }
