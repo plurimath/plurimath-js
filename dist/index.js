@@ -19,5 +19,8 @@ export default class Plurimath {
     toOmml() {
         return this.data.$to_omml();
     }
+    toDisplay(lang) {
+        return this.data.$to_display(lang);
+    }
 }
 //# sourceMappingURL=index.js.map

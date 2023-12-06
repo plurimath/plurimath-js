@@ -25,5 +25,8 @@ class Plurimath {
   toOmml() {
     return this.data.$to_omml();
   }
+  toDisplay(lang) {
+    return this.data.$to_display(lang);
+  }
 }
 exports.default = Plurimath;

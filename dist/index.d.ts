@@ -7,4 +7,5 @@ export default class Plurimath {
     toMathml(): string;
     toHtml(): string;
     toOmml(): string;
+    toDisplay(lang: string): string;
 }
