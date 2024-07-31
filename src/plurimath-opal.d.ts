@@ -5,7 +5,7 @@ declare namespace Opal {
 
   namespace Plurimath {
     namespace Math {
-      type Format = 'asciimath' | 'latex' | 'mathml' | 'html' | 'mahtml' | 'omml'
+      type Format = 'asciimath' | 'latex' | 'mathml' | 'html' | 'unicode' | 'omml'
       function $parse(data: string | unknown, format: Format): ParserResult
 
       type TransmuterFunction = () => string
@@ -17,6 +17,7 @@ declare namespace Opal {
         $to_html: TransmuterFunction
         $to_omml: TransmuterFunction
         $to_display: (string) => string
+        $to_unicodemath: TransmuterFunction
       }
     }
   }

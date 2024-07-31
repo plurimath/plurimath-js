@@ -8,12 +8,19 @@ bundle exec opal --esm -sjruby \
                  -qerb \
                  -rcorelib/array/pack \
                  -ropal-parser \
+                 -gunitsml \
                  -ghtmlentities \
-                 -goga \
                  -gparslet \
+                 -gzeitwerk \
+                 -gmonitor \
+                 -sox \
+                 -sox/ox \
+                 -sox.so \
+                 -Ivendor/oga/lib/ \
                  -Ivendor/oga/xml/ \
                  -Ivendor/oga/xpath/ \
                  -Ivendor/oga/ext/pureruby/ \
+                 -Ivendor/ruby-ll/lib/ \
                  -Ivendor/ruby-ll/ext/pureruby/ \
                  -Ivendor/plurimath/lib \
                  -pplurimath \
