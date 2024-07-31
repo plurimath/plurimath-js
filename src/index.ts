@@ -32,4 +32,8 @@ export default class Plurimath {
   toDisplay(lang: string) {
     return this.data.$to_display(lang);
   }
+
+  toUnicodemath() {
+    return this.data.$to_unicodemath();
+  }
 }

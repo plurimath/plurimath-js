@@ -15,10 +15,10 @@
   "scripts": {
     "test": "npm run test:js && npm run test:rb",
     "test:js": "npm run build && jest",
-    "test:rb": "podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c './setup.sh && env/plurimath'",
+    "test:rb": "podman run --rm -it -v $(pwd):/srv:z plurimath-js /bin/bash -c './setup.sh && env/plurimath'",
     "podman:build": "podman build -t plurimath-js .",
-    "podman:shell": "podman run --rm -it -v.:/srv:z plurimath-js",
-    "podman:bundle": "podman run --rm -it -v.:/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh'",
+    "podman:shell": "podman run --rm -it -v $(pwd):/srv:z plurimath-js",
+    "podman:bundle": "podman run --rm -it -v $(pwd):/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh'",
     "build": "npm run podman:build && npm run podman:bundle",
     "submodule:init": "git submodule init && npm run submodule:update",
     "submodule:update": "git submodule update"
