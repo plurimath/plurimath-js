@@ -9,6 +9,7 @@ bundle exec opal --esm -sjruby \
                  -rcorelib/array/pack \
                  -ropal-parser \
                  -gunitsml \
+                 -gnokogiri \
                  -ghtmlentities \
                  -goga \
                  -gparslet \
