@@ -10,6 +10,7 @@ bundle exec opal --esm -sjruby \
                  -ropal-parser \
                  -gunitsml \
                  -gnokogiri \
+                 -gjava \
                  -ghtmlentities \
                  -goga \
                  -gparslet \
