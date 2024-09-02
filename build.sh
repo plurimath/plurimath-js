@@ -8,14 +8,20 @@ bundle exec opal --esm -sjruby \
                  -qerb \
                  -rcorelib/array/pack \
                  -ropal-parser \
+                 -gunitsml \
+                 -gnokogiri \
+                 -gjava \
                  -ghtmlentities \
                  -goga \
+                 -sox \
+                 -sox/ox \
+                 -sox.so \
                  -gparslet \
                  -Ivendor/oga/xml/ \
                  -Ivendor/oga/xpath/ \
                  -Ivendor/oga/ext/pureruby/ \
                  -Ivendor/ruby-ll/ext/pureruby/ \
-                 -Ivendor/plurimath/lib \
+                 -Iplurimath/lib \
                  -pplurimath \
                  -c -e'#' > tmp/plurimath-opal.js
 
