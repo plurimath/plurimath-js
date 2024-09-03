@@ -3,7 +3,7 @@ name: Update Plurimath Submodule
 on:
   push:
     branches:
-      - main
+      - master
   repository_dispatch:
     types: [update-submodule]
 
@@ -19,7 +19,7 @@ jobs:
 
     - name: Update Plurimath Submodule
       run: |
-        BRANCH_NAME="${{ github.event.client_payload.branch }}"
+        BRANCH_NAME="${{ github.event.client_payload.branch || 'main' }}"
 
         cd vendor/plurimath
         git checkout $BRANCH_NAME
