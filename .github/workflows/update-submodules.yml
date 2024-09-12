@@ -8,7 +8,7 @@ on:
     types: [update-submodule]
 
 jobs:
-  rake:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,7 +28,6 @@ jobs:
 
         cd ../../
         echo $(pwd)
-        s
     # - uses: ./.github/workflows/npm.yml
     #   with:
     #     node-version: 20.x
