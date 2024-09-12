@@ -7,8 +7,7 @@ on:
   pull_request:
     branches:
       - features/ci/plurimath_js_workflows
-  repository_dispatch:
-    types: [update-submodule]
+  workflow_dispatch:
 
 jobs:
   update-submodule:
@@ -22,7 +21,7 @@ jobs:
 
     - name: Update Plurimath Submodule
       run: |
-        BRANCH_NAME="${{ github.event.client_payload.github.branch || 'main' }}"
+        BRANCH_NAME="${{ github.event.client_payload.branch || 'main' }}"
         echo Branch Name: $BRANCH_NAME
         cd vendor/plurimath
         git checkout $BRANCH_NAME
