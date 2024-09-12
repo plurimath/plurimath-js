@@ -19,7 +19,7 @@ jobs:
 
     - name: Update Plurimath Submodule
       run: |
-        BRANCH_NAME="${{ github.event.client_payload.branch || 'main' }}"
+        BRANCH_NAME="${{ github.event.client_payload.github.branch || 'main' }}"
         echo Branch Name: $BRANCH_NAME
         cd vendor/plurimath
         git checkout $BRANCH_NAME
