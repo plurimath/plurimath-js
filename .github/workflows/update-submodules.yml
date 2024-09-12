@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
       - features/ci/plurimath_js_workflows
   repository_dispatch:
     types: [update-submodule]
