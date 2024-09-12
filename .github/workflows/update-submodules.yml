@@ -8,7 +8,7 @@ on:
     types: [update-submodule]
 
 jobs:
-  update-submodule:
+  rake:
     runs-on: ubuntu-latest
 
     steps:
