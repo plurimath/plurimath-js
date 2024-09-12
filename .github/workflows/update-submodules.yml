@@ -11,7 +11,7 @@ on:
     types: [update-submodule]
 
 jobs:
-  build:
+  update-submodule:
     runs-on: ubuntu-latest
 
     steps:
