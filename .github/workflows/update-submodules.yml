@@ -20,12 +20,12 @@ jobs:
       run: |
         BRANCH_NAME="${{ github.event.branch || 'main' }}"
         echo Branch Name: $BRANCH_NAME
-        cd vendor/plurimath
-        git checkout $BRANCH_NAME
+        # cd vendor/plurimath
+        # git checkout $BRANCH_NAME
         cat lib/plurimath/version.rb
         echo "echoed version"
 
-        cd ../../
+        # cd ../../
         echo $(pwd)
-    - name: Run npm
-      uses: ./.github/workflows/npm.yml
+    # - name: Run npm
+    #   uses: ./.github/workflows/npm.yml
