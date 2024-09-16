@@ -4,10 +4,7 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - features/ci/plurimath_js_workflows
-  workflow_dispatch:
+  workflow_call:
 
 jobs:
   update-submodule:
@@ -21,7 +18,7 @@ jobs:
 
     - name: Update Plurimath Submodule
       run: |
-        BRANCH_NAME="${{ github.event.client_payload.branch || 'main' }}"
+        BRANCH_NAME="${{ github.event.branch || 'main' }}"
         echo Branch Name: $BRANCH_NAME
         cd vendor/plurimath
         git checkout $BRANCH_NAME
@@ -30,6 +27,5 @@ jobs:
 
         cd ../../
         echo $(pwd)
-    # - uses: ./.github/workflows/npm.yml
-    #   with:
-    #     node-version: 20.x
+    - name: Run npm
+      uses: ./.github/workflows/npm.yml
