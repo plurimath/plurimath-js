@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - features/ci_automation_plurimath
+      # - features/ci_automation_plurimath
   workflow_dispatch:
 
 jobs:
