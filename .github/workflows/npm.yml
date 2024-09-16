@@ -7,16 +7,6 @@ on:
     branches: [ "master" ]
 
 jobs:
-  update-plurimath-submodule:
-    runs-on: ubuntu-latest
-
-    steps:
-      - run: |
-          cd vendor/plurimath
-          git checkout ${{ github.event.client_payload.branch || 'main' }}
-          cat lib/plurimath/version.rb
-          echo "echoed version"
-
   build:
     runs-on: ubuntu-latest
 
@@ -35,5 +25,11 @@ jobs:
 
     - name: Build
       run: |
-        cat vendor/plurimath/lib/plurimath/version.rb
+        cd vendor/plurimath
+        git checkout ${{ github.event.client_payload.branch || 'main' }}
+        cat lib/plurimath/version.rb
+        echo "echoed version"
+
+        cd ../../
+
         npm run test:js
