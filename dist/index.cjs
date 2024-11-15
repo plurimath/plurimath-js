@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-require("./plurimath-opal.cjs");
+require("./plurimath-opal");
 Opal.require("plurimath");
 class Plurimath {
   constructor(data, format) {
