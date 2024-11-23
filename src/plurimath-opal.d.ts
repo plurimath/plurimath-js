@@ -1,10 +1,10 @@
 declare namespace Opal {
   type ModuleName = 'plurimath'
 
-  declare function require(module: ModuleName): void
+  function require(module: ModuleName): void
 
-  declare namespace Plurimath {
-    declare namespace Math {
+  namespace Plurimath {
+    namespace Math {
       type Format = 'asciimath' | 'latex' | 'mathml' | 'html' | 'mahtml' | 'omml'
       function $parse(data: string | unknown, format: Format): ParserResult
 
@@ -22,6 +22,3 @@ declare namespace Opal {
   }
 }
 
-declare module './plurimath-opal.js' {
-  export = Opal
-}

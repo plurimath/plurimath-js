@@ -2,7 +2,16 @@
   "name": "@plurimath/plurimath",
   "version": "0.2.1",
   "description": "Convert mathematical formulas between formats (MathML, OMMX, LatexMath, AsciiMath).",
-  "main": "dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "test": "npm run test:js && npm run test:rb",
     "test:js": "npm run build && jest",

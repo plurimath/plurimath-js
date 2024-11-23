@@ -28,6 +28,8 @@ mv tmp/plurimath-opal.min.js.map tmp/plurimath-opal.js.map
 cp tsconfig.json tmp/
 npx tsc -p tmp/tsconfig.json
 cp tmp/plurimath-opal.js tmp/plurimath-opal.js.map dist/
+# Replace a generated type map with a handcrafted one
+cp src/plurimath-opal.d.ts dist/
 
 echo "** Generating compatible CJS versions of the library"
 npx babel dist/index.js -o dist/index.cjs
