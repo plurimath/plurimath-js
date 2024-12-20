@@ -24,4 +24,4 @@ gem 'simplecov'
 gem 'ox'
 gem 'unitsml'
 gem 'monitor'
-gem 'mml'
+gem 'mml', "~> 1"
