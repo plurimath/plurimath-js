@@ -25,4 +25,11 @@ jobs:
 
     - name: Build
       run: |
+        cd vendor/plurimath
+        git checkout ${{ github.event.client_payload.branch || 'main' }}
+        cat lib/plurimath/version.rb
+        echo "echoed version"
+
+        cd ../../
+
         npm run test:js
