@@ -1,4 +1,4 @@
-import "./plurimath-opal";
+import "./plurimath-opal.js";
 export default class Plurimath {
     data: Opal.Plurimath.Math.ParserResult;
     constructor(data: string, format: Opal.Plurimath.Math.Format);
@@ -8,4 +8,5 @@ export default class Plurimath {
     toHtml(): string;
     toOmml(): string;
     toDisplay(lang: string): string;
+    toUnicodemath(): string;
 }
