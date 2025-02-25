@@ -11,7 +11,6 @@ bundle exec opal --esm -sjruby \
                  -gunitsml \
                  -ghtmlentities \
                  -gparslet \
-                 -gzeitwerk \
                  -gmonitor \
                  -sox \
                  -sox/ox \
