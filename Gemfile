@@ -24,4 +24,5 @@ gem 'simplecov'
 gem 'ox'
 gem 'unitsml'
 gem 'monitor'
-gem 'mml', "~> 1"
+# gem 'mml'
+gem 'mml', github: "plurimath/mml", branch: "update/zeitwerk_removal_for_plurimath-js"
