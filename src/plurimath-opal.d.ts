@@ -7,13 +7,12 @@ declare namespace Opal {
     namespace Math {
       type Format = 'asciimath' | 'latex' | 'mathml' | 'html' | 'unicode' | 'omml'
       function $parse(data: string | unknown, format: Format): ParserResult
-
       type TransmuterFunction = () => string
 
       class ParserResult {
         $to_latex: TransmuterFunction
         $to_asciimath: TransmuterFunction
-        $to_mathml: TransmuterFunction
+        $to_mathml: (options?: Map<string, boolean>) => string
         $to_html: TransmuterFunction
         $to_omml: TransmuterFunction
         $to_display: (string) => string
