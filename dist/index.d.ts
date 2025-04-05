@@ -4,7 +4,7 @@ export default class Plurimath {
     constructor(data: string, format: Opal.Plurimath.Math.Format);
     toAsciimath(): string;
     toLatex(): string;
-    toMathml(): string;
+    toMathml(intent?: boolean): string;
     toHtml(): string;
     toOmml(): string;
     toDisplay(lang: string): string;

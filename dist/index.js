@@ -10,8 +10,8 @@ export default class Plurimath {
     toLatex() {
         return this.data.$to_latex();
     }
-    toMathml() {
-        return this.data.$to_mathml();
+    toMathml(intent = false) {
+        return this.data.$to_mathml(new Map([["intent", intent]]));
     }
     toHtml() {
         return this.data.$to_html();
