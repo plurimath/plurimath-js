@@ -1,5 +1,4 @@
 import "./plurimath-opal.js";
-
 Opal.require("plurimath");
 
 export default class Plurimath {

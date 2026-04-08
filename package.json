@@ -15,10 +15,12 @@
   "scripts": {
     "test": "npm run test:js && npm run test:rb",
     "test:js": "npm run build && jest",
-    "test:rb": "podman run --rm -it -v $(pwd):/srv:z plurimath-js /bin/bash -c './setup.sh && env/plurimath'",
+    "test:rb": "npm run test:rb:native",
+    "test:rb:opal": "podman run --rm -i -e OPAL_PREFORK_DISABLE=1 -v .:/srv:z plurimath-js /bin/bash -c './setup.sh && env/plurimath'",
+    "test:rb:native": "podman run --rm -i -e OPAL_PREFORK_DISABLE=1 -v .:/srv:z plurimath-js /bin/bash -c './setup.sh && bundle exec rspec spec/unitsml_opal_payload_generator_spec.rb'",
     "podman:build": "podman build -t plurimath-js .",
-    "podman:shell": "podman run --rm -it -v $(pwd):/srv:z plurimath-js",
-    "podman:bundle": "podman run --rm -it -v $(pwd):/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh'",
+    "podman:shell": "podman run --rm -it -e OPAL_PREFORK_DISABLE=1 -v .:/srv:z plurimath-js",
+    "podman:bundle": "podman run --rm -i -e OPAL_PREFORK_DISABLE=1 -v .:/srv:z plurimath-js /bin/bash -c './setup.sh && ./build.sh'",
     "build": "npm run podman:build && npm run podman:bundle",
     "submodule:init": "git submodule init && npm run submodule:update",
     "submodule:update": "git submodule update"
