@@ -27,7 +27,7 @@ RSpec.describe PlurimathJs::UnitsmlOpalPayloadGenerator do
       expect(source).to include(".freeze")
     end
 
-    it "preserves UTF-8 unit symbols in the generated Ruby literal" do
+    it "renders unit symbols as a Ruby literal" do
       source = described_class.to_ruby_source(
         database_hash.merge(
           "units" => [
@@ -39,9 +39,10 @@ RSpec.describe PlurimathJs::UnitsmlOpalPayloadGenerator do
         ),
       )
 
-      expect(source.encoding).to eq(Encoding::UTF_8)
-      expect(source).to include('"Ω"')
-      expect(source).to include('"µΩ"')
+      rendered_hash = source.match(/load_opal_payload\(\n  (.*)\.freeze,/m)[1]
+      payload = eval(rendered_hash) # rubocop:disable Security/Eval
+
+      expect(payload["units"].first["symbols"]).to eq(["Ω", "µΩ"])
     end
   end
 

@@ -13,8 +13,11 @@ bundle exec opal --esm -sjruby \
                  -qerb \
                  -rcorelib/array/pack \
                  -ropal-parser \
+                 -qoga/setup_opal \
+                 -qll/setup_opal \
                  -Itmp/ \
                  -runitsml_opal_payload \
+                 -gplurimath \
                  -gunitsml \
                  -ghtmlentities \
                  -gparslet \
