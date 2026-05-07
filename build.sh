@@ -1,17 +1,28 @@
 #!/bin/sh
+set -e
+
 rm -rf tmp/
 mkdir -p tmp/
 cp src/* tmp/
+
+echo "** Generating UnitsML Opal payload"
+bundle exec ruby scripts/generate_unitsml_opal_payload.rb tmp/unitsml_opal_payload.rb
 
 echo "** Compiling Plurimath-Opal from Ruby with Opal"
 bundle exec opal --esm -sjruby \
                  -qerb \
                  -rcorelib/array/pack \
                  -ropal-parser \
+                 -qoga/setup_opal \
+                 -qll/setup_opal \
+                 -Itmp/ \
+                 -runitsml_opal_payload \
+                 -gplurimath \
                  -gunitsml \
                  -ghtmlentities \
                  -gparslet \
                  -gmonitor \
+                 -snokogiri \
                  -sox \
                  -sox/ox \
                  -sox.so \

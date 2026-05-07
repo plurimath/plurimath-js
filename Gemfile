@@ -6,10 +6,10 @@ gem 'equivalent-xml', path: 'vendor/equivalent-xml'
 gem 'ruby-ll', path: 'vendor/ruby-ll'
 gem 'htmlentities', path: 'vendor/htmlentities'
 gem 'opal', path: 'vendor/opal'
+gem 'plurimath', path: 'vendor/plurimath'
 
 gem 'opal-rspec', '>= 1.1.0a'
 
-gem 'nokogiri'
 gem 'rake'
 gem 'rspec'
 gem 'ae'
@@ -22,6 +22,7 @@ gem 'rack'
 gem 'rackup'
 gem 'simplecov'
 gem 'ox'
-gem 'unitsml'
 gem 'monitor'
-gem 'mml'
+gem 'unitsml', git: 'https://github.com/unitsml/unitsml-ruby.git', branch: 'fix/opal-database-payload-loader'
+gem 'lutaml-model', github: "lutaml/lutaml-model", branch: "fix/opal-runtime-compatibility-changes"
+gem 'omml', github: "plurimath/omml", branch: "fix/opal-runtime-compatibility-changes"

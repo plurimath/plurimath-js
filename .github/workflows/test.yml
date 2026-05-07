@@ -1,0 +1,41 @@
+name: test
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        node-version: [16, 18, 20, 22]
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build bundle
+      run: |
+        npm run podman:build
+        npm run podman:bundle
+
+    - name: Run JavaScript tests
+      run: npx jest
+
+    - name: Run native Ruby tests
+      run: npm run test:rb

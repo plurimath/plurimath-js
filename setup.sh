@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 git submodule init
 git submodule update
@@ -14,4 +15,3 @@ env/oga rake
 
 rm -rf vendor/*/tmp/*
 rm -rf vendor/ruby-ll/lib/libll.so vendor/oga/lib/liboga.so
-
