@@ -6,7 +6,7 @@
 	url = https://github.com/plurimath/htmlentities
 [submodule "vendor/oga"]
 	path = vendor/oga
-	url = https://github.com/plurimath/oga
+	url = https://github.com/lutaml/opal-oga
 [submodule "vendor/parslet"]
 	path = vendor/parslet
 	url = https://github.com/plurimath/parslet
@@ -15,7 +15,22 @@
 	url = https://github.com/plurimath/plurimath
 [submodule "vendor/ruby-ll"]
 	path = vendor/ruby-ll
-	url = https://github.com/plurimath/ruby-ll
+	url = https://github.com/lutaml/opal-ruby-ll
 [submodule "vendor/opal"]
 	path = vendor/opal
 	url = https://github.com/plurimath/opal
+[submodule "vendor/omml"]
+	path = vendor/omml
+	url = https://github.com/plurimath/omml
+[submodule "vendor/mml"]
+	path = vendor/mml
+	url = https://github.com/plurimath/mml
+[submodule "vendor/unitsml"]
+	path = vendor/unitsml
+	url = https://github.com/unitsml/unitsml-ruby
+[submodule "vendor/unitsdb"]
+	path = vendor/unitsdb
+	url = https://github.com/unitsml/unitsdb-ruby
+[submodule "vendor/rexml"]
+	path = vendor/rexml
+	url = https://github.com/ruby/rexml
