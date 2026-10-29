@@ -19,6 +19,7 @@ bundle exec opal --esm -sjruby \
                  -runitsml_opal_payload \
                  -gplurimath \
                  -gunitsml \
+                 -grexml \
                  -ghtmlentities \
                  -gparslet \
                  -gmonitor \
