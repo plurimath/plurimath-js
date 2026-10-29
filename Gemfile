@@ -23,6 +23,7 @@ gem 'rackup'
 gem 'simplecov'
 gem 'ox'
 gem 'monitor'
-gem 'unitsml', git: 'https://github.com/unitsml/unitsml-ruby.git', branch: 'fix/opal-database-payload-loader'
+# First released payload-loader API compatible with vendored Plurimath's mml 2.3.x.
+gem 'unitsml', '0.6.7'
 gem 'lutaml-model', github: "lutaml/lutaml-model", branch: "fix/opal-runtime-compatibility-changes"
 gem 'omml', github: "plurimath/omml", branch: "fix/opal-runtime-compatibility-changes"
