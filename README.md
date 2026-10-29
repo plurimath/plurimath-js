@@ -37,7 +37,7 @@ console.log(formula.toLatex());
 CommonJS:
 
 ```javascript
-const Plurimath = require("@plurimath/plurimath/index.cjs").default;
+const Plurimath = require("@plurimath/plurimath").default;
 
 const formula = new Plurimath('ubrace(1+2+3+4)_("4 terms")', "asciimath");
 console.log(formula.toLatex());
