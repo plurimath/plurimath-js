@@ -23,6 +23,8 @@ gem 'rackup'
 gem 'simplecov'
 gem 'ox'
 gem 'monitor'
+# Opal explicitly includes Moxml's optional REXML formatter.
+gem 'rexml'
 # First released payload-loader API compatible with vendored Plurimath's mml 2.3.x.
 gem 'unitsml', '0.6.7'
 gem 'lutaml-model', github: "lutaml/lutaml-model", ref: "a2e6f0b8e06aafce9f41c7cbea4d48575192b517"
