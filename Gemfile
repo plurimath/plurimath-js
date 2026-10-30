@@ -25,6 +25,8 @@ gem 'ox'
 gem 'monitor'
 # Opal explicitly includes Moxml's optional REXML formatter.
 gem 'rexml'
+# Merged Opal signature guard; replace with a released gem when available.
+gem 'moxml', github: "lutaml/moxml", ref: "d1d478f4ecf9811269760dfc882f23ad921c7b22"
 # First released payload-loader API compatible with vendored Plurimath's mml 2.3.x.
 gem 'unitsml', '0.6.7'
 gem 'lutaml-model', github: "lutaml/lutaml-model", ref: "a2e6f0b8e06aafce9f41c7cbea4d48575192b517"
