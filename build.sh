@@ -4,17 +4,29 @@ mkdir -p tmp/
 cp src/* tmp/
 
 echo "** Compiling Plurimath-Opal from Ruby with Opal"
-bundle exec opal --esm -sjruby \
+# Opal 2.0's prefork scheduler deadlocks on macOS; serialize the build.
+OPAL_PREFORK_DISABLE=1 bundle exec opal --esm -sjruby \
                  -qerb \
                  -rcorelib/array/pack \
                  -ropal-parser \
+                 -gmml \
+                 -gomml \
                  -gunitsml \
                  -ghtmlentities \
                  -gparslet \
                  -gmonitor \
+                 -glutaml-model \
+                 -gmoxml \
+                 -grexml \
+                 -rcompat/opal/moxml_boot \
                  -sox \
                  -sox/ox \
                  -sox.so \
+                 -slutaml/turtle \
+                 -slutaml/jsonld \
+                 -slutaml/rdf \
+                 -srdf \
+                 -sweakref \
                  -Ivendor/oga/lib/ \
                  -Ivendor/oga/xml/ \
                  -Ivendor/oga/xpath/ \
@@ -39,5 +51,5 @@ cp src/plurimath-opal.d.ts dist/
 
 echo "** Generating compatible CJS versions of the library"
 npx babel dist/index.js -o dist/index.cjs
-sed -i 's/plurimath-opal.js/plurimath-opal.cjs/g' dist/index.cjs
+sed -i.bak 's/plurimath-opal.js/plurimath-opal.cjs/g' dist/index.cjs && rm -f dist/index.cjs.bak
 npx babel dist/plurimath-opal.js -o dist/plurimath-opal.cjs
